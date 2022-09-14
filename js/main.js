@@ -57,7 +57,7 @@ const balls= [];
 
 while (balls.length < 25) {
   const size = random(10, 20);
-  const ball = new ball(
+  const ball = new Ball(
     // ball position always drawn at least one ball width
     // away from the edge of the canvas, to avoid drawing errors
     random (0 + size, width - size),
@@ -71,8 +71,8 @@ while (balls.length < 25) {
 }
 
 function loop() {
-  ctx.fillStyle = 'rgba(0,0,0,0.25)';
-  ctx.fillRect = (0, 0, width, height);
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+  ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
     ball.draw();
